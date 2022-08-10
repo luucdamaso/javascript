@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        fieldset {
+            background-color: rgba(169, 169, 169, 0.234);
+            width: 300px;
+        }
+        input {
+            font-weight: bold;
+            background-color: white;
+        }
+        input:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual a sua nacionalidade?</h1>
+    <form action="script" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Nacionalidade</legend>
+            <p>Em que país você nasceu?</p>
+                <input type="text" name="paisn" id="paisn"><br><br>
+                <input type="button" value="Verificar" onclick="verificar()">
+                <input type="reset" value="Limpar" onclick="reset()"><br><br>
+            <div id="res">Resultado</div>
+        </fieldset>
+    </form>
+    <script>
+        function verificar() {
+            var pn = window.document.getElementById('paisn')
+            var res = window.document.getElementById('res')
+            pn.value = pn.value.toUpperCase()
+            if (pn.value == 'BRASIL') {
+                res.innerHTML = 'Você é <strong>Brasileiro</strong>!'
+            } else {
+                res.innerHTML = 'Você é <strong>estrangeiro</strong>!'
+            }
+        }
+        function reset() {
+            var reset2 = window.document.getElementById('res')
+            reset2.innerHTML = 'Resultado'
+        }
+    </script>
+</body>
+</html>
