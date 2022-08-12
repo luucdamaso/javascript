@@ -9,6 +9,7 @@ body {
 header {
     color: white;
     text-align: center;
+    margin: auto;
 }
 
 section {
@@ -25,4 +26,5 @@ footer {
     color: white;
     text-align: center;
     font-style: italic;
+    margin: auto;
 }
